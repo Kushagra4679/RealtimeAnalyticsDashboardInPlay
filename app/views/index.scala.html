@@ -1,0 +1,84 @@
+@import controllers.routes
+@(title: String)
+
+<html>
+<head>
+  <title>@title</title>
+  <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center; /* Center-align the contents horizontally */
+        align-items: center; /* Center-align the contents vertically */
+        margin-top: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+    .content {
+        padding: 20px;
+    }
+    footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Welcome to the Analysis Dashboard</h1>
+  </header>
+
+  <div class="content">
+    <h2 style="text-align: center;">Analytics Overview</h2>
+    <p style="text-align: center;">Here you can find an overview of the analytics data.</p>
+    <div class="button-container">
+    <a href="@routes.AnalysisController.analysis()" class="button">Go to Analysis</a>
+    </div>
+    <!-- Add more sections or widgets here -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Company</p>
+  </footer>
+</div>
+
+</body>
+</html>
